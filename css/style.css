@@ -658,8 +658,7 @@ template {
     background-color: #333333;
   }
   .stars {
-    -ms-flex-preferred-size: content;
-        flex-basis: content;
+    width: auto;
   }
   .hotel-name {
     -ms-flex-preferred-size: 100%;
