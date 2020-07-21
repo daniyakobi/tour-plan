@@ -616,7 +616,7 @@ template {
 .swiper-container {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 100%;
   border-radius: 8px;
 }
 
@@ -635,7 +635,8 @@ template {
 }
 
 .slider {
-  max-width: 728px;
+  width: 728px;
+  height: 450px;
 }
 
 .slider-button {
@@ -793,16 +794,28 @@ template {
 .map {
   width: 347px;
   height: 213px;
-  border-radius: 4px;
+}
+
+.map iframe {
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
   .container {
     max-width: 920px;
   }
+  .slider {
+    width: 550px;
+  }
+  .swiper-slide__img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
   .container {
     max-width: 700px;
   }
@@ -825,6 +838,30 @@ template {
     line-height: 15px;
   }
   .search__input {
+    width: 340px;
+  }
+  .hotel-grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hotel__slider {
+    margin-bottom: 30px;
+  }
+  .hotel-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .slider {
+    width: 100%;
+  }
+  .booking {
+    width: 340px;
+  }
+  .map {
     width: 340px;
   }
 }
@@ -891,8 +928,21 @@ template {
             order: -1;
     margin-left: 0;
   }
-  .swiper-container {
-    height: 325px;
+  .slider {
+    height: 350px;
+  }
+  .hotel-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 450px;
+  }
+  .booking {
+    width: 100%;
+  }
+  .map {
+    width: 100%;
   }
 }
 
@@ -904,20 +954,11 @@ template {
   .logo {
     width: 99px;
   }
-  .swiper-container {
+  .slider {
     height: 250px;
   }
-}
-
-@media (max-width: 768px) and (max-width: 460px) {
-  .swiper-container {
-    height: 225px;
-  }
-}
-
-@media (max-width: 768px) and (max-width: 410px) {
-  .swiper-container {
-    height: 175px;
+  .hotel__slider {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
