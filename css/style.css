@@ -808,6 +808,7 @@ template {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background: transparent;
 }
 
 .newsletter::before {
@@ -857,6 +858,10 @@ template {
 .newsletter__title {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.parallax-window {
+  speed: 10;
 }
 
 .subscribe {
