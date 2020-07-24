@@ -74,6 +74,29 @@
   .card
     width: 339px
     height: 255px
+  .grid
+    &-container
+      display: none
+  .packages
+    &-slider
+      display: block
+      &-wrapper
+        display: flex
+        flex-direction: column
+      &__item
+        max-width: 700px
+        height: 500px
+        background-color: $dark
+        border-radius: 8px
+    .swiper
+      &-pagination
+        &-bullet
+          &-active 
+            background: $primary-color
+  .item
+    &__img
+      &-one
+        width: 366px
 
 
 @media ( max-width: 768px )

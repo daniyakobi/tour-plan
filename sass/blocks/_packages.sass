@@ -9,15 +9,25 @@
   &-container
     padding-top: 40px
     padding-bottom: 70px
+  &-slider
+    display: none
   &-cards
     &__item
       position: relative
       background-color: $dark
       &:first-child
-        .item-description__stars
-          display: block
-          margin-top: 0
-          margin-bottom: 5px
+        .item
+          &-description
+            &__stars
+              display: block
+              margin-top: 0
+              margin-bottom: 5px
+            &__text
+              display: block
+              font-size: 14px
+              line-height: 22px
+              margin-bottom: 34px   
+              overflow: hidden
     &__offer
       position: absolute
       top: 26px
@@ -106,9 +116,7 @@
       &-all
         margin-bottom: 23px
     &__text
-      font-size: 14px
-      line-height: 22px
-      margin-bottom: 34px
+      display: none
     &__person
       margin-bottom: 37px
       &-all 

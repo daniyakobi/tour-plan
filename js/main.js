@@ -25,3 +25,17 @@ var reviewsSlider = new Swiper('.reviews-slider', {
     onlyInViewport: false,
   },
 })
+
+var packagesSlider = new Swiper('.packages-slider', {
+  // Optional parameters
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+})
