@@ -1,0 +1,154 @@
+.packages
+  &__title
+    margin: 0
+    padding-bottom: 65px
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+  &-container
+    padding-top: 40px
+    padding-bottom: 70px
+  &-cards
+    &__item
+      position: relative
+      background-color: $dark
+      &:first-child
+        .item-description__stars
+          display: block
+          margin-top: 0
+          margin-bottom: 5px
+.grid
+  &-container
+    display: grid
+    grid-template-areas: "item-1 item-1 item-2" "item-3 item-4 item-5"
+    grid-template-columns: 350px 350px 350px
+    grid-template-rows: 530px 530px
+    justify-content: space-between
+  &__item-1
+    grid-area: item-1
+    margin-bottom: 30px  
+  &__item-2
+    grid-area: item-2
+    margin-bottom: 30px  
+  &__item-3
+    grid-area: item-3
+  &__item-4
+    grid-area: item-4
+  &__item-5
+    grid-area: item-5
+.item 
+  border-radius: 8px
+  &__img
+    &-one
+      position: absolute
+      top: 0
+      left: 0
+      width: 366px
+      height: 500px
+      img
+        width: 100%
+        height: 100%
+        border-radius: 8px 0px 0px 8px
+        object-fit: cover
+    &-all
+      position: absolute
+      top: 0
+      left: 0
+      width: 350px
+      height: 250px
+      img
+        width: 100%
+        height: 100%
+        border-radius: 8px 8px 0px 0px
+        object-fit: cover
+  &__description
+    position: absolute
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    top: 46px
+    right: 21px
+    max-width: 300px
+    color: $light
+    &-all
+      position: absolute
+      top: 280px
+      right: 0
+      left: 32px
+  &-description
+    &__stars
+      display: none
+    &__title
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 27px
+      &-all
+        margin-bottom: 23px
+    &__text
+      font-size: 14px
+      line-height: 22px
+      margin-bottom: 34px
+    &__person
+      margin-bottom: 37px
+      &-all 
+        margin-bottom: 24px
+    &__old-price
+      font-size: 14px
+      line-height: 18px
+      text-decoration-line: line-through
+      margin-bottom: 5px
+    &__book-now
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__new-price
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+    &__button
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 120px
+      height: 40px
+      border: none
+      background-color: $primary-color
+      border-radius: 4px
+      color: $light
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+.person
+  &__text
+    display: flex
+    align-items: center
+    margin-bottom: 11px
+    &:last-child
+      margin-bottom: 0
+  &__icon
+    margin-right: 14px
+  &__description
+    font-size: 12px
+    line-height: 15px
+.offer
+  position: absolute
+  top: 26px
+  left: 0
+  z-index: 2
+  padding: 11px 8px
+  background-color: $primary-color
+  color: $light
+  font-weight: 600
+  font-size: 12px
+  line-height: 15px
+  &-all
+    display: flex
+    font-size: 8px
+    line-height: 10px
+    width: 60px
+    height: 18px
+    align-items: center
+    justify-content: center
