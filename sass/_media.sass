@@ -86,7 +86,6 @@
       &__item
         max-width: 700px
         height: 500px
-        background-color: $dark
         border-radius: 8px
     .swiper
       &-pagination
@@ -96,8 +95,14 @@
   .item
     &__img
       &-one
-        width: 366px
-
+        width: 700px
+    &-description
+      background-color: $dark
+      opacity: 0.85
+      top: 15px
+      right: 15px
+      padding: 10px
+      border-radius: 8px
 
 @media ( max-width: 768px )
   .container, .newsletter-wrapper
@@ -178,6 +183,30 @@
   .card
     width: 48%
     height: 255px
+  .item
+    &__img
+      &-one
+        width: 576px
+  .packages
+    &-cards
+      &__item
+        &:first-child
+          .item
+            &-description
+              &__title
+                margin-bottom: 20px
+              &__text
+                margin-bottom: 25px
+              &__person
+                margin-bottom: 24px
+
+  .packages
+    &__title
+      font-size: 30px
+      line-height: 38px
+      padding-bottom: 45px
+    &-container
+      padding-top: 20px
 
 @media ( max-width: 576px )
   .container, .newsletter-wrapper
@@ -215,3 +244,27 @@
       margin-bottom: 36px
   .card
     width: 100%
+  .item
+    &__img
+      &-one
+        width: 500px
+    &-description
+      top: 185px
+      &__book-now
+        flex-direction: column
+        align-items: flex-start
+      &__person
+        margin-bottom: 24px
+      &__new-price
+        margin-bottom: 10px
+      &__button
+        width: 100%
+  .packages
+    &-cards
+      &__item
+        &:first-child
+          .item
+            &-description
+              &__text
+                display: none
+    
