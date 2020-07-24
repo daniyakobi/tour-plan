@@ -18,6 +18,25 @@
           display: block
           margin-top: 0
           margin-bottom: 5px
+    &__offer
+      position: absolute
+      top: 26px
+      left: 0
+      z-index: 2
+      padding: 11px 8px
+      background-color: $primary-color
+      color: $light
+      font-weight: 600
+      font-size: 12px
+      line-height: 15px
+      &-all
+        display: flex
+        font-size: 8px
+        line-height: 10px
+        width: 60px
+        height: 18px
+        align-items: center
+        justify-content: center
 .grid
   &-container
     display: grid
@@ -121,6 +140,7 @@
       font-weight: 600
       font-size: 14px
       line-height: 19px
+      cursor: pointer
 .person
   &__text
     display: flex
@@ -133,22 +153,4 @@
   &__description
     font-size: 12px
     line-height: 15px
-.offer
-  position: absolute
-  top: 26px
-  left: 0
-  z-index: 2
-  padding: 11px 8px
-  background-color: $primary-color
-  color: $light
-  font-weight: 600
-  font-size: 12px
-  line-height: 15px
-  &-all
-    display: flex
-    font-size: 8px
-    line-height: 10px
-    width: 60px
-    height: 18px
-    align-items: center
-    justify-content: center
+
