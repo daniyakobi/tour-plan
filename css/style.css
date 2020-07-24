@@ -864,8 +864,8 @@ template {
       grid-template-areas: "item-1 item-1 item-2" "item-3 item-4 item-5";
   -ms-grid-columns: 350px 350px 350px;
       grid-template-columns: 350px 350px 350px;
-  -ms-grid-rows: 530px 530px;
-      grid-template-rows: 530px 530px;
+  -ms-grid-rows: 530px 500px;
+      grid-template-rows: 530px 500px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1407,6 +1407,23 @@ template {
   .card {
     width: 215px;
     height: 215px;
+  }
+  .grid-container {
+    -ms-grid-columns: 295px 295px 295px;
+        grid-template-columns: 295px 295px 295px;
+  }
+  .item__img-one {
+    width: 300px;
+  }
+  .item__img-all {
+    width: 295px;
+  }
+  .item__description {
+    max-width: 275px;
+    right: 19px;
+  }
+  .item-description__person {
+    margin-bottom: 30px;
   }
 }
 
