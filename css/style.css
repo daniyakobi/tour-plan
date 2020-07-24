@@ -1524,7 +1524,10 @@ template {
     background: #EC1F46;
   }
   .item__img-one {
-    width: 700px;
+    width: 100%;
+  }
+  .item__img-one img {
+    border-radius: 8px;
   }
   .item-description {
     background-color: #0A223D;
@@ -1656,7 +1659,7 @@ template {
     height: 255px;
   }
   .item__img-one {
-    width: 576px;
+    width: 100%;
   }
   .packages-cards__item:first-child .item-description__title {
     margin-bottom: 20px;
@@ -1723,7 +1726,7 @@ template {
     width: 100%;
   }
   .item__img-one {
-    width: 500px;
+    width: 100%;
   }
   .item-description {
     top: 185px;
