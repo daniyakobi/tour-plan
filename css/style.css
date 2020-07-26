@@ -1566,6 +1566,7 @@ template {
             flex-direction: column;
     border: none;
     background-color: #ffffff;
+    outline: none;
     cursor: pointer;
   }
   .navbar .menu-button__line {
@@ -1748,6 +1749,10 @@ template {
   }
   .item-description__button {
     width: 100%;
+  }
+  .packages__title {
+    font-size: 18px;
+    line-height: 23px;
   }
   .packages-cards__item:first-child .item-description__text {
     display: none;
