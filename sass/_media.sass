@@ -281,16 +281,12 @@
       background-color: $dark
       transition: all 0.3s ease 0s
       &__search
-        position: absolute
-        top: 126px
-        z-index: 7
+        margin-top: 27px
         overflow: hidden
         border-radius: 6px
-        height: 40px
+        min-height: 40px
       &__user
-        position: absolute
-        top: 31px
-        z-index: 7
+        margin-top: 31px
         flex-direction: column
         .user
           &__name
@@ -299,9 +295,8 @@
         span
           color: $light
       &__items
-        position: absolute
         padding: 0
-        top: 205px
+        margin-top: 39px
         flex-direction: column
         .navbar
           &-menu
@@ -316,11 +311,13 @@
     .line
       &-before
         transform: rotate(45deg)
+        transition: all 0.5s ease 0s
         margin-top: 5px
       &-main
         transform: scale(0)
       &-after
         transform: rotate(-45deg)
+        transition: all 0.5s ease 0s
         margin-bottom: 5px
 
 @media ( max-width: 576px )
@@ -441,5 +438,20 @@
         .search
           &__input
             width: 225px
+
+@media ( max-height: 542px)
+   .mobile
+     &-menu
+       &__search
+         margin-top: 15px
+       &__user
+         margin-top: 20px
+       &__items
+         margin-top: 20px
+         .navbar
+            &-menu
+              &__item
+                margin-bottom: 13px
+  
   
     
