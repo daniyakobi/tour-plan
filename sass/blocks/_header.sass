@@ -1,5 +1,9 @@
 .navbar
-  
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 99
   background-color: #ffffff
   &-top
     display: flex
@@ -27,6 +31,10 @@
       text-transform: uppercase
   &-bottom
     background-color: $dark
+    &__search
+      display: none
+    &__user
+      display: none
 .logo
   width: 177px
 .search
@@ -68,3 +76,8 @@
     font-size: 14px
     line-height: 18px
     color: $text-color
+.mobile
+  &-menu
+    display: none
+    &__items
+      padding: 0

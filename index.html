@@ -45,9 +45,9 @@
         </a>
         <!-- /.user -->
         <button class="menu-button navbar-top__menu-button">
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
-          <span class="menu-button__line"></span>
+          <span class="menu-button__line line-before"></span>
+          <span class="menu-button__line line-main"></span>
+          <span class="menu-button__line line-after"></span>
         </button>
       </div>
       <!-- /.navbar-top -->
@@ -70,8 +70,33 @@
     <!-- /.navbar-bottom -->
   </header>
   <!-- /.header -->
+  <div class="mobile-menu">
+    <form action="#" class="search mobile-menu__search">
+      <input type="text" class="search__input" placeholder="Search Location">
+      <button class="search__button">
+        <img src="img/search.svg" alt="Icon: Search">
+      </button>
+    </form>
+    <!-- /.search -->
+    <a href="#" class="user mobile-menu__user">
+      <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+      <span class="user__name">Nathan</span>
+    </a>
+    <!-- /.user -->
+    <ul class="navbar-menu mobile-menu__items">
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
+    </ul>
+    <!-- /.navbar-menu -->
+  </div>
+  <!-- /.mobile-menu -->
   <nav class="breadcrumb">
-    <div class="container">
+    <div class="container breadcrumb__container">
       <ul class="breadcrumb-list">
         <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Home</a></li>
         <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Flash Offers</a></li>

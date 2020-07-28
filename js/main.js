@@ -1,3 +1,11 @@
+$(document).ready(function() {
+  $('.menu-button').click(function(event) {
+    $('.menu-button').toggleClass('active-burger');
+    $('.mobile-menu').toggleClass('active-menu');
+    $('body').toggleClass('lock');
+  });
+});
+
 var hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
