@@ -22,6 +22,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e939ef02-4350-49df-bed9-0ab515cb3089" type="text/javascript"></script>
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -56,9 +57,9 @@
     <div class="navbar-bottom">
       <div class="container">
         <ul class="navbar-menu">
-          <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">All Deals</a></li>
-          <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotels</a></li>
-          <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Activities</a></li>
+          <li class="navbar-menu__item"><a href="#packages" class="navbar-menu__link">All Deals</a></li>
+          <li class="navbar-menu__item"><a href="#hotel" class="navbar-menu__link">Hotels</a></li>
+          <li class="navbar-menu__item"><a href="#activities" class="navbar-menu__link">Activities</a></li>
           <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
           <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
           <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
@@ -84,13 +85,13 @@
     </form>
     <!-- /.search -->
     <ul class="navbar-menu mobile-menu__items">
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">All Deals</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Hotels</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Activities</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Hotel Day Packages</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Restaurants</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Events</a></li>
-      <li class="navbar-menu__item"><a href="index.html" class="navbar-menu__link">Rodrigues</a></li>
+      <li class="navbar-menu__item"><a href="#packages" class="navbar-menu__link">All Deals</a></li>
+      <li class="navbar-menu__item"><a href="#hotel" class="navbar-menu__link">Hotels</a></li>
+      <li class="navbar-menu__item"><a href="#activities" class="navbar-menu__link">Activities</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Hotel Day Packages</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Restaurants</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Events</a></li>
+      <li class="navbar-menu__item"><a href="#" class="navbar-menu__link">Rodrigues</a></li>
     </ul>
     <!-- /.navbar-menu -->
   </div>
@@ -106,7 +107,7 @@
     <!-- /.container -->
   </nav>
   <!-- /.breadcrumb -->
-  <section class="hotel">
+  <section class="hotel" id="hotel">
     <div class="container">
       <div class="hotel-info">
         <div class="hotel-info__text">
@@ -181,11 +182,7 @@
             <button class="button booking__button">View Other Options</button>
           </div>
           <!-- /.booking -->
-          <div class="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7c3b6bde7fd55260f2e15bf52d3ea1fa305778d2093a9c3fe6c93c0cc50772f&amp;source=constructor" 
-            height="213">
-          </iframe>
-          </div>
+          <div class="map" id="map"></div>
           <!-- /.map -->
         </div>
         <!-- /.hotel-right -->
@@ -195,7 +192,7 @@
     <!-- /.container -->
   </section>
   <!-- /.hotel -->
-  <section class="packages">
+  <section class="packages" id="packages">
     <div class="container packages-container">
       <h2 class="packages__title">Other Packages</h2>
       <div class="grid-container packages-cards">
@@ -583,7 +580,7 @@
     <!-- /.packages-slider -->  <!-- /.container -->
   </section>
   <!-- /.packages -->
-  <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="./img/newsletter-bg.jpg">
+  <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="./img/newsletter-bg.jpg" id="newsletter">
     <div class="newsletter-wrapper">
       <h2 class="newsletter-title newsletter__title">
         subscribe to our
@@ -597,7 +594,7 @@
     </div>
   </section>
   <!-- /.newsletter -->
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <div class="container">
       <h2 class="reviews__title">What people thinks about us</h2>
       <div class="swiper-container reviews-slider">
@@ -648,7 +645,7 @@
     </div>
   </section>
   <!-- /.reviews -->
-  <section class="activities">
+  <section class="activities" id="activities">
     <div class="container">
       <h2 class="activities__title">Other Activities</h2>
       <div class="activities-wrapper">
@@ -781,12 +778,12 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form">
           <h3 class="footer__title">Send us a message</h3>
-          <form action="#" class="footer__form">
+          <form action="send.php" method="POST" class="footer__form">
             <div class="footer__inputs">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*">
-              <input type="text" class="input footer__input" placeholder="Phone Number*">
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
+              <input type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
             </div>
-            <textarea class="footer__message" cols="30" rows="10" placeholder="Message"></textarea>
+            <textarea class="footer__message" placeholder="Message" name="message" ></textarea>
             <div class="footer__send">
               <button class="button footer__button">Send</button>
               <span class="footer__info">* Required Fields</span>
