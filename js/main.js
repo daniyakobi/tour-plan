@@ -66,7 +66,7 @@ var hotelSlider = new Swiper('.hotel-slider', {
     enabled: true,
     onlyInViewport: false,
   },
-})
+});
 
 var reviewsSlider = new Swiper('.reviews-slider', {
   // Optional parameters
@@ -80,7 +80,7 @@ var reviewsSlider = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: false,
   },
-})
+});
 
 var packagesSlider = new Swiper('.packages-slider', {
   // Optional parameters
@@ -94,4 +94,4 @@ var packagesSlider = new Swiper('.packages-slider', {
     enabled: true,
     onlyInViewport: false,
   },
-})
+});
