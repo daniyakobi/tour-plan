@@ -33,12 +33,14 @@ ymaps.ready(function () {
 });
 
 $(document).ready(function() {
+  // Меню бургер для мобильных устройств
   $('.menu-button').click(function(event) {
     $('.menu-button').toggleClass('active-burger');
     $('.mobile-menu').toggleClass('active-menu');
     $('body').toggleClass('lock');   
   });
 
+  // Переход по странице с использованием якорных ссылок
   $(".navbar-menu").on("click","a", function (event) {
     $('.menu-button').removeClass('active-burger');
     $('.mobile-menu').removeClass('active-menu');
@@ -50,6 +52,31 @@ $(document).ready(function() {
     top = $(id).offset().top - $('.navbar').height();
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({scrollTop: top}, 1500);
+  });
+    // Модальное окно
+  var modalButton = $('[data-toggle=modal-button]');
+  var closeModal = $('[data-toggle=modal-close]');
+
+  modalButton.click(function(event) {
+    $('.modal__overlay, .modal__dialog').toggleClass('active-modal');
+    $('body').toggleClass('lock');   
+  });
+  closeModal.click(function(event) {
+    $('.modal__overlay, .modal__dialog').removeClass('active-modal');
+    $('body').removeClass('lock');   
+  });
+  // closeModal.on("keydown", function(button) {
+  //   if(button.keyCode == 27) {
+  //     window.close(); 
+  //     $('.modal__overlay, .modal__dialog').removeClass('active-modal');
+  //     $('body').removeClass('lock');  
+  //   };
+  // });
+  $(document).keydown(function(btnEsc) {
+    if(btnEsc.keyCode == 27) {
+      $('.modal__overlay, .modal__dialog').removeClass('active-modal');
+      $('body').removeClass('lock');   
+    };
   });
 });
 

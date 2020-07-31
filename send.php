@@ -41,16 +41,17 @@
         $mail->Port       = 465;
         $mail->setFrom('nadeev.danil2016@yandex.ru', 'Даниил Надеев'); // Адрес самой почты и имя отправителя
         // Получатель письма
-        $mail->addAddress('Katikch21@gmail.com');  
-        $mail->addAddress('erios2015@yandex.ru');  
-    // Отправка сообщения
-    $mail->isHTML(true);
-    $mail->Subject = $title;
-    if(empty($email)) { $mail->Body = $body1; }
-    else { $mail->Body = $body2; }
-    // Проверяем отравленность сообщения
-    if ($mail->send()) {$result = "success";} 
-    else {$result = "error";}
+        if(empty($email)) { $mail->addAddress('nadeev.danil2016@yandex.ru'); }
+        else { $mail->addAddress($email); }
+
+        // Отправка сообщения
+        $mail->isHTML(true);
+        $mail->Subject = $title;
+        if(empty($email)) { $mail->Body = $body1; }
+        else { $mail->Body = $body2; }
+        // Проверяем отравленность сообщения
+        if ($mail->send()) {$result = "success";} 
+        else {$result = "error";}
 
     } catch (Exception $e) {
         $result = "error";
