@@ -13,15 +13,22 @@
     // Формирование самого письма
     $title = "Новое обращение Best Tour Plan";
     $body1 = "
-    <h2>Новое обращение</h2>
-    <b>Имя:</b> $name<br>
-    <b>Телефон:</b> $phone<br><br>
-    <b>Сообщение:</b><br>$message
+        <h2>Новое обращение</h2>
+        <b>Имя:</b> $name<br>
+        <b>Телефон:</b> $phone<br><br>
+        <b>Сообщение:</b><br>$message
     ";
     $body2 = "
-    <h2>Новое обращение</h2>
-    <b>Вы успешно подписались на наши обновления и новости!</b><br>
-    <b>Email:</b> $email<br><br>
+        <h2>Новое обращение</h2>
+        <b>Вы успешно подписались на наши обновления и новости!</b><br>
+        <b>Email:</b> $email<br><br>
+    ";
+    $body3 = "
+        <h2>Новое обращение</h2>
+        <b>Имя:</b> $name<br>
+        <b>Телефон:</b> $phone<br><br>
+        <b>Email:</b> $email<br><br>
+        <b>Сообщение:</b><br>$message
     ";
     
     // Настройки PHPMailer
@@ -47,8 +54,9 @@
         // Отправка сообщения
         $mail->isHTML(true);
         $mail->Subject = $title;
-        if(empty($email)) { $mail->Body = $body1; }
-        else { $mail->Body = $body2; }
+        if(empty($name)) { $mail->Body = $body2; }
+        elseif (empty($email)) { $mail->Body = $body1; }
+        else { $mail->Body = $body3; }
         // Проверяем отравленность сообщения
         if ($mail->send()) {$result = "success";} 
         else {$result = "error";}

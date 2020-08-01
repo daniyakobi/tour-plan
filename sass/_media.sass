@@ -187,6 +187,7 @@
           width: 16px
           height: 1px
           background-color: $text-color
+          transition: all 0.5s ease 0s
   .breadcrumb
     &__container
       padding-top: 78px
@@ -314,13 +315,11 @@
       .line
         &-before
           transform: rotate(45deg)
-          transition: all 0.5s ease 0s
           margin-top: 5px
         &-main
           transform: scale(0)
         &-after
           transform: rotate(-45deg)
-          transition: all 0.5s ease 0s
           margin-bottom: 5px  
   .modal
     &__dialog
@@ -330,7 +329,9 @@
       align-items: flex-start
     &__info
       margin-bottom: 15px
-    
+    &__button
+      align-self: center
+      width: 100%
 
 @media ( max-width: 576px )
   .container, .newsletter-wrapper
@@ -456,7 +457,11 @@
       padding: 20px 25px  
 
 @media ( max-height: 542px)
-   .mobile
+  .modal
+    &__dialog
+      overflow: scroll
+      height: 400px
+  .mobile
      &-menu
        &__search
          margin-top: 15px
@@ -468,6 +473,27 @@
             &-menu
               &__item
                 margin-bottom: 13px
-  
+
+@media ( max-height: 480px)
+  .modal
+    &__dialog
+      height: 350px
+
+@media ( max-height: 430px)
+  .modal
+    &__dialog
+      height: 300px
+
+@media ( max-height: 390px)
+  .modal
+    &__dialog
+      height: 260px
+
+@media ( max-height: 350px)
+  .modal
+    &__dialog
+      height: 240px
+
+
   
     

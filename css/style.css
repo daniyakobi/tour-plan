@@ -828,6 +828,10 @@ template {
   height: 213px;
 }
 
+.ymaps-2-1-77-map ymaps, .ymaps-2-1-77-map ymaps:after, .ymaps-2-1-77-map ymaps:before {
+  border-radius: 10px;
+}
+
 .packages__title {
   margin: 0;
   padding-bottom: 65px;
@@ -2103,6 +2107,8 @@ body.lock {
     width: 16px;
     height: 1px;
     background-color: #333333;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
   }
   .breadcrumb__container {
     padding-top: 78px;
@@ -2274,8 +2280,6 @@ body.lock {
   .active-burger .line-before {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
     margin-top: 5px;
   }
   .active-burger .line-main {
@@ -2285,8 +2289,6 @@ body.lock {
   .active-burger .line-after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
     margin-bottom: 5px;
   }
   .modal__dialog {
@@ -2303,6 +2305,12 @@ body.lock {
   }
   .modal__info {
     margin-bottom: 15px;
+  }
+  .modal__button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
   }
 }
 
@@ -2489,6 +2497,10 @@ body.lock {
 }
 
 @media (max-height: 542px) {
+  .modal__dialog {
+    overflow: scroll;
+    height: 400px;
+  }
   .mobile-menu__search {
     margin-top: 15px;
   }
@@ -2500,6 +2512,30 @@ body.lock {
   }
   .mobile-menu__items .navbar-menu__item {
     margin-bottom: 13px;
+  }
+}
+
+@media (max-height: 480px) {
+  .modal__dialog {
+    height: 350px;
+  }
+}
+
+@media (max-height: 430px) {
+  .modal__dialog {
+    height: 300px;
+  }
+}
+
+@media (max-height: 390px) {
+  .modal__dialog {
+    height: 260px;
+  }
+}
+
+@media (max-height: 350px) {
+  .modal__dialog {
+    height: 240px;
   }
 }
 /*# sourceMappingURL=style.css.map */

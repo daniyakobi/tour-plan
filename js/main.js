@@ -1,37 +1,3 @@
-// Карта
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-          center: [7.574017, 79.803766],
-          zoom: 13
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Собственный значок метки',
-          balloonContent: 'Это красивая метка'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/place.svg',
-          // Размеры метки.
-          iconImageSize: [30, 42],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      })
-
-  myMap.geoObjects
-   .add(myPlacemark);
-});
-
 $(document).ready(function() {
   // Меню бургер для мобильных устройств
   $('.menu-button').click(function(event) {
@@ -53,7 +19,7 @@ $(document).ready(function() {
     //анимируем переход на расстояние - top за 1500 мс
     $('body,html').animate({scrollTop: top}, 1500);
   });
-    // Модальное окно
+  // Модальное окно
   var modalButton = $('[data-toggle=modal-button]');
   var closeModal = $('[data-toggle=modal-close]');
 
@@ -65,13 +31,8 @@ $(document).ready(function() {
     $('.modal__overlay, .modal__dialog').removeClass('active-modal');
     $('body').removeClass('lock');   
   });
-  // closeModal.on("keydown", function(button) {
-  //   if(button.keyCode == 27) {
-  //     window.close(); 
-  //     $('.modal__overlay, .modal__dialog').removeClass('active-modal');
-  //     $('body').removeClass('lock');  
-  //   };
-  // });
+
+  // Закрытие модального окна по нажатию кнопки Escape
   $(document).keydown(function(btnEsc) {
     if(btnEsc.keyCode == 27) {
       $('.modal__overlay, .modal__dialog').removeClass('active-modal');
@@ -79,7 +40,41 @@ $(document).ready(function() {
     };
   });
 });
-
+// Карта
+const locationName = location.pathname.slice(location.pathname.lastIndexOf('/'));
+if (locationName === '/' || locationName === '/index.html') {
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [7.574017, 79.803766],
+            zoom: 13
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+  
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+  
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Grand Hilton Hotel'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/place.svg',
+            // Размеры метки.
+            iconImageSize: [30, 42],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        })
+  
+    myMap.geoObjects
+     .add(myPlacemark);
+  });
+};
 
 var hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
