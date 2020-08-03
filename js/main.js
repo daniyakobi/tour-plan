@@ -42,7 +42,7 @@ $(document).ready(function() {
 
   // Обработка формы
   // Маски для полей ввода
-  $('.modal__phone').mask('0(000) 000-00-00');
+  $('.modal__phone, .footer__phone').mask('0(000) 000-00-00');
 
   // Валидация форм
   $('.modal__form').validate({
@@ -71,6 +71,7 @@ $(document).ready(function() {
       },
       phone: {
         required: "Enter your phone number",
+        phone: "Your phone must be in the format of 0(000) 000-00-00",
       },
     },
   });
