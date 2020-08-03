@@ -34,8 +34,9 @@
       align-items: flex-start
       margin-bottom: 0
     &__input
-      width: 100%
-      margin-bottom: 15px
+      &-group
+        width: 100%
+        margin-bottom: 15px
 
 @media ( max-width: 992px )
   .container, .newsletter-wrapper
@@ -143,7 +144,8 @@
     &__inputs
       flex-direction: row
     &__input
-      width: 49%
+      &-group
+        width: 49%
     &__contact
       &-details
         margin-top: 21px
@@ -432,7 +434,8 @@
     &__inputs
       flex-direction: column
     &__input
-      width: 100%
+      &-group
+        width: 100%
     &__send
       flex-direction: column-reverse
       align-items: flex-start

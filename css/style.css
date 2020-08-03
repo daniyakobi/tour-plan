@@ -23,6 +23,10 @@ img {
   margin: auto;
 }
 
+.invalid {
+  color: #EC1F46;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1172,7 +1176,6 @@ template {
 }
 
 .subscribe__input {
-  position: absolute;
   width: 100%;
   height: 100%;
   border: none;
@@ -1181,6 +1184,12 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+}
+
+.subscribe__input-group {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .subscribe__button {
@@ -1529,19 +1538,23 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 15px;
 }
 
 .footer__input {
-  -ms-flex-preferred-size: 49%;
-      flex-basis: 49%;
+  width: 100%;
   padding: 23px 18px;
   border: none;
   border-radius: 4px;
   overflow: hidden;
+}
+
+.footer__input-group {
+  -ms-flex-preferred-size: 49%;
+      flex-basis: 49%;
 }
 
 .footer__message {
@@ -1769,7 +1782,7 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   padding: 0;
   font-weight: bold;
   font-size: 18px;
@@ -1789,7 +1802,7 @@ body.lock {
   line-height: 15px;
   color: #BDBDBD;
   padding: 18px 23px;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
@@ -1804,7 +1817,7 @@ body.lock {
   line-height: 15px;
   color: #BDBDBD;
   padding: 18px 23px;
-  margin-bottom: 15px;
+  margin-top: 15px;
   resize: none;
 }
 
@@ -1832,6 +1845,8 @@ body.lock {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .modal__info {
@@ -1890,7 +1905,7 @@ body.lock {
             align-items: flex-start;
     margin-bottom: 0;
   }
-  .footer__input {
+  .footer__input-group {
     width: 100%;
     margin-bottom: 15px;
   }
@@ -2044,7 +2059,7 @@ body.lock {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .footer__input {
+  .footer__input-group {
     width: 49%;
   }
   .footer__contact-details {
@@ -2457,7 +2472,7 @@ body.lock {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .footer__input {
+  .footer__input-group {
     width: 100%;
   }
   .footer__send {

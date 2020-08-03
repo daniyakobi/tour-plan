@@ -22,7 +22,7 @@ $(document).ready(function() {
   // Модальное окно
   var modalButton = $('[data-toggle=modal-button]');
   var closeModal = $('[data-toggle=modal-close]');
-
+  // Модальное окно с формой обратной связи
   modalButton.click(function(event) {
     $('.modal__overlay, .modal__dialog').toggleClass('active-modal');
     $('body').toggleClass('lock');   
@@ -38,6 +38,47 @@ $(document).ready(function() {
       $('.modal__overlay, .modal__dialog').removeClass('active-modal');
       $('body').removeClass('lock');   
     };
+  });
+
+  // Обработка формы
+  // Маски для полей ввода
+  $('.modal__phone').mask('0(000) 000-00-00');
+
+  // Валидация форм
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        require: "Please specify your name",
+        minlength: "The name must be at least 3 letters long",
+      },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com",
+      },
+      phone: {
+        required: "Enter your phone number",
+        phone: "Your phone must be in the format of 0(000) 000-00-00",
+      },
+    },
+  });
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    messages: {
+      name: {
+        require: "Please specify your name",
+        minlength: "The name must be at least 3 letters long",
+      },
+      phone: {
+        required: "Enter your phone number",
+      },
+    },
+  });
+  $('.newsletter__subscribe').validate({
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com"
+    },
   });
 });
 // Карта

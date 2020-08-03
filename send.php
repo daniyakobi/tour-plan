@@ -25,9 +25,9 @@
     ";
     $body3 = "
         <h2>Новое обращение</h2>
+        <b>От:</b> $email<br>
         <b>Имя:</b> $name<br>
-        <b>Телефон:</b> $phone<br><br>
-        <b>Email:</b> $email<br><br>
+        <b>Телефон:</b> $phone<br>
         <b>Сообщение:</b><br>$message
     ";
     
@@ -48,8 +48,8 @@
         $mail->Port       = 465;
         $mail->setFrom('nadeev.danil2016@yandex.ru', 'Даниил Надеев'); // Адрес самой почты и имя отправителя
         // Получатель письма
-        if(empty($email)) { $mail->addAddress('nadeev.danil2016@yandex.ru'); }
-        else { $mail->addAddress($email); }
+        if(empty($name)) { $mail->addAddress($email); }
+        else { $mail->addAddress('nadeev.danil2016@yandex.ru');}
 
         // Отправка сообщения
         $mail->isHTML(true);

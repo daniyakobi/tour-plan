@@ -587,7 +587,9 @@
         <span class="newsletter-title__strong">Newsletter</span>
       </h2>
       <form action="send.php" method="POST" class="subscribe newsletter__subscribe" name="newsletter-form">
-        <input required type="email" class="subscribe__input" placeholder="Your email address" name="email">
+        <div class="subscribe__input-group">
+          <input required type="email" class="subscribe__input" placeholder="Your email address" name="email">
+        </div>
         <button class="subscribe__button">Send</button>
       </form>
       <!-- /.subscribe -->
@@ -780,8 +782,12 @@
           <h3 class="footer__title">Send us a message</h3>
           <form action="send.php" method="POST" class="footer__form" name="footer-form">
             <div class="footer__inputs">
-              <input required type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
-              <input required type="text" class="input footer__input" placeholder="Phone Number*" name="phone">
+              <div class="footer__input-group">
+                <input required minlength="3" type="text" class="input footer__input" placeholder="Your Full Name*" name="name">
+              </div>
+              <div class="footer__input-group">
+                <input required type="tel" class="input footer__input" placeholder="Phone Number*" name="phone">
+              </div>
             </div>
             <textarea class="footer__message" placeholder="Message" name="message" ></textarea>
             <div class="footer__send">
@@ -807,7 +813,7 @@
     </div>
   </footer>
   <!-- /.footer -->
- <div class="modal">
+  <div class="modal">
     <div class="modal__overlay"></div>
     <!-- /.modal__overlay -->
     <div class="modal__dialog">
@@ -816,11 +822,9 @@
       </a>
       <h3 class="modal__title">Booking</h3>
       <form action="send.php" method="POST" class="modal__form" name="modal-form">
-        <div class="modal__inputs">
-          <input required type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-          <input required type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-          <input required type="email" class="input modal__input" placeholder="Email*" name="email">
-        </div>
+        <input required minlength="3" type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
+        <input required minlength="11" maxlength="11" type="tel" class="input modal__input modal__phone" placeholder="Phone Number*" name="phone">
+        <input required type="email" class="input modal__input" placeholder="Email*" name="email">
         <textarea class="modal__message" placeholder="Message" name="message" ></textarea>
         <div class="modal__send">
           <button class="button modal__button">Send</button>
@@ -831,9 +835,11 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=e939ef02-4350-49df-bed9-0ab515cb3089&lang=ru_RU"></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/main.js"></script>
 </body>
