@@ -112,50 +112,62 @@ if (locationName === '/' || locationName === '/index.html') {
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
         })
-  
+
     myMap.geoObjects
      .add(myPlacemark);
+    myMap.behaviors.disable('scrollZoom');
   });
+
+  // Слайдеры
+  var hotelSlider = new Swiper('.hotel-slider', {
+    // Optional parameters
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.hotel-slider__button--next',
+      prevEl: '.hotel-slider__button--prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  });
+  
+  var reviewsSlider = new Swiper('.reviews-slider', {
+    // Optional parameters
+    loop: true,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.reviews-slider__button--next',
+      prevEl: '.reviews-slider__button--prev',
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+  });
+  
+  var packagesSlider = new Swiper('.packages-slider', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    lazy: {
+      loadPrevNext: true,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
+  });
+  
+  AOS.init();
+
 };
 
-var hotelSlider = new Swiper('.hotel-slider', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.hotel-slider__button--next',
-    prevEl: '.hotel-slider__button--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-});
 
-var reviewsSlider = new Swiper('.reviews-slider', {
-  // Optional parameters
-  loop: true,
-  // Navigation arrows
-  navigation: {
-    nextEl: '.reviews-slider__button--next',
-    prevEl: '.reviews-slider__button--prev',
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-});
 
-var packagesSlider = new Swiper('.packages-slider', {
-  // Optional parameters
-  loop: true,
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false,
-  },
-});

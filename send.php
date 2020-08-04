@@ -20,7 +20,7 @@
     ";
     $body2 = "
         <h2>Новое обращение</h2>
-        <b>Вы успешно подписались на наши обновления и новости!</b><br>
+        <b>На ваши обновления и новости успешно подписался пользователь:</b><br>
         <b>Email:</b> $email<br><br>
     ";
     $body3 = "
@@ -48,8 +48,7 @@
         $mail->Port       = 465;
         $mail->setFrom('nadeev.danil2016@yandex.ru', 'Даниил Надеев'); // Адрес самой почты и имя отправителя
         // Получатель письма
-        if(empty($name)) { $mail->addAddress($email); }
-        else { $mail->addAddress('nadeev.danil2016@yandex.ru');}
+        $mail->addAddress('nadeev.danil2016@yandex.ru');}
 
         // Отправка сообщения
         $mail->isHTML(true);

@@ -836,6 +836,10 @@ template {
   border-radius: 10px;
 }
 
+.swiper-container {
+  margin: 0;
+}
+
 .packages__title {
   margin: 0;
   padding-bottom: 65px;
