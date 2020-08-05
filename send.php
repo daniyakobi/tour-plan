@@ -48,7 +48,7 @@
         $mail->Port       = 465;
         $mail->setFrom('nadeev.danil2016@yandex.ru', 'Даниил Надеев'); // Адрес самой почты и имя отправителя
         // Получатель письма
-        $mail->addAddress('nadeev.danil2016@yandex.ru');}
+        $mail->addAddress('nadeev.danil2016@yandex.ru');
 
         // Отправка сообщения
         $mail->isHTML(true);

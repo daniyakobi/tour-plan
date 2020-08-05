@@ -88,35 +88,52 @@
     height: 255px
   .grid
     &-container
-      display: none
+      grid-template-columns: 700px
+      grid-template-rows: 530px 530px 530px 530px 500px
+      grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5"
+    &__item-3
+      margin-bottom: 30px
+    &__item-4
+      margin-bottom: 30px
   .packages
-    &-slider
-      display: block
-      &-wrapper
-        display: flex
-        flex-direction: column
-      &__item
-        max-width: 700px
-        height: 500px
-        border-radius: 8px
-    .swiper
-      &-pagination
-        &-bullet
-          &-active 
-            background: $primary-color
-  .item
+    &-cards
+      &__offer
+        &-all
+          padding: 8px 11px
+          font-size: 12px
+          line-height: 15px
+  .item 
     &__img
+      max-width: 700px
       &-one
-        width: 100%
+        width: 366px
+      &-all
+        position: absolute
+        top: 0
+        left: 0
+        width: 366px
+        height: 500px
         img
-          border-radius: 8px
+          width: 100%
+          height: 100%
+          border-radius: 8px 0px 0px 8px
+          object-fit: cover
+    &__description
+      &-all
+        max-width: 275px
+        top: 46px
+        left: auto
     &-description
-      background-color: $dark
-      opacity: 0.85
-      top: 15px
-      right: 15px
-      padding: 10px
-      border-radius: 8px
+      &__stars
+        display: block
+        margin-top: 0
+        margin-bottom: 5px
+      &__text
+        display: block
+        font-size: 14px
+        line-height: 22px
+        margin-bottom: 34px   
+        overflow: hidden
   .footer
     padding-top: 73px
     padding-bottom: 33px
@@ -249,29 +266,35 @@
   .card
     width: 48%
     height: 255px
-  .item
-    &__img
-      &-one
-        width: 100%
+  .grid
+    &-container
+      grid-template-columns: minmax(500px, 576px)
   .packages
-    &-cards
-      &__item
-        &:first-child
-          .item
-            &-description
-              &__title
-                margin-bottom: 20px
-              &__text
-                margin-bottom: 25px
-              &__person
-                margin-bottom: 24px
-  .packages
+    &-container
+      padding-top: 20px
     &__title
       font-size: 30px
       line-height: 38px
-      padding-bottom: 45px
-    &-container
-      padding-top: 20px
+      padding-bottom: 50px
+  .item
+    max-width: 576px
+    &__img
+      &-one
+        width: 100%
+        img
+          border-radius: 8px
+      &-all
+        width: 100%
+        img
+          border-radius: 8px
+    &__description
+      top: 35px
+      background-color: $dark
+      opacity: 0.85
+      padding: 10px
+      border-radius: 8px
+      top: 15px
+      right: 15px
   .mobile
     &-menu
       position: fixed
@@ -371,25 +394,31 @@
       margin-bottom: 36px
   .card
     width: 100%
+  .grid
+    &-container
+      grid-template-columns: minmax(285px, 500px)
+      grid-template-rows: 520px 520px 520px 520px 500px
   .item
-    &__img
-      &-one
-        width: 100%
     &-description
-      top: 185px
+      top: 208px
+      &__text
+        display: none
       &__book-now
         flex-direction: column
         align-items: flex-start
-      &__person
-        margin-bottom: 24px
+      &__old-price
+        margin-bottom: 0
       &__new-price
-        margin-bottom: 10px
+        margin-bottom: 5px
       &__button
         width: 100%
   .packages
+    &-container
+      padding-top: 0
     &__title
       font-size: 18px
       line-height: 23px
+      padding-bottom: 30px
     &-cards
       &__item
         &:first-child
