@@ -16,7 +16,7 @@ $(document).ready(function(){
   // Валидация форм
   $('.modal__form').validate({errorClass: "invalid",messages: {name: {require: "Please specify your name",minlength: "The name must be at least 3 letters long",},email: {required: "We need your email address to contact you",email: "Your email address must be in the format of name@domain.com",},phone: {required: "Enter your phone number",phone: "Your phone must be in the format of 0(000) 000-00-00",},},});
   $('.footer__form').validate({errorClass: "invalid",messages: {name: {require: "Please specify your name",minlength: "The name must be at least 3 letters long",},phone: {required: "Enter your phone number",phone: "Your phone must be in the format of 0(000) 000-00-00",},},});
-  $('.newsletter__subscribe').validate({errorClass: "invalid",email: {required: "We need your email address to contact you",email: "Your email address must be in the format of name@domain.com"},});
+  //$('.newsletter__subscribe').validate({errorClass: "invalid",email: {required: "We need your email address to contact you",email: "Your email address must be in the format of name@domain.com"},});
   // Слайдеры
   var hotelSlider = new Swiper('.hotel-slider', {loop: true,navigation: {nextEl: '.hotel-slider__button--next',prevEl: '.hotel-slider__button--prev',},keyboard: {enabled: true,onlyInViewport: false,},});
   var reviewsSlider = new Swiper('.reviews-slider', {loop: true,navigation: {nextEl: '.reviews-slider__button--next',prevEl: '.reviews-slider__button--prev',},keyboard: {enabled: true,onlyInViewport: false,},});

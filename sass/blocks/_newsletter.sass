@@ -1,7 +1,8 @@
 .newsletter
   position: relative
-  padding: 98px 0 87px 0
+  min-height: 260px
   background: transparent
+  display: flex
   &::before
     content: ''
     position: absolute 
@@ -17,7 +18,7 @@
     display: flex
     align-items: center
     justify-content: space-between
-    max-width: 731px
+    width: 731px
     margin: auto
   &-title
     color: $light
@@ -25,6 +26,7 @@
     font-weight: 300
     font-size: 24px
     line-height: 30px
+    max-width: 350px
     &__strong
       display: block
       font-style: normal
@@ -59,6 +61,7 @@
   &__button
     position: absolute
     min-width: 65px
+    max-width: 100%
     right: 0
     top: 0
     height: 100%

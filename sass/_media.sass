@@ -29,14 +29,23 @@
       &__person
         margin-bottom: 30px
   .footer
+    &__contact
+      &-form
+        padding-left: 10px
     &__inputs
       flex-direction: column
       align-items: flex-start
       margin-bottom: 0
+      max-width: 450px
     &__input
+      width: 100%
       &-group
         width: 100%
         margin-bottom: 15px
+    &__message
+      width: 450px
+    &__send
+      width: 450px
 
 @media ( max-width: 992px )
   .container, .newsletter-wrapper
@@ -121,6 +130,7 @@
     &__description
       &-all
         max-width: 275px
+        height: 442px
         top: 46px
         left: auto
     &-description
@@ -133,7 +143,6 @@
         font-size: 14px
         line-height: 22px
         margin-bottom: 34px   
-        overflow: hidden
   .footer
     padding-top: 73px
     padding-bottom: 33px
@@ -160,9 +169,16 @@
       margin-left: 0
     &__inputs
       flex-direction: row
+      max-width: 539px
     &__input
+      width: 255px
+      height: 50px
       &-group
         width: 49%
+    &__message
+      width: 539px
+    &__send
+      width: 539px
     &__contact
       &-details
         margin-top: 21px
@@ -172,6 +188,7 @@
         margin-top: 20px
         grid-column: span 5
         grid-row: 4
+        padding-left: 0
     &-bottom
       margin-top: 56px
       &__wrapper
@@ -180,11 +197,11 @@
     &__dialog
       padding: 20px 60px
 
-@media ( max-width: 768px )
+@media ( max-width: 767px )
   body.lock 
     overflow: hidden
   .container, .newsletter-wrapper
-    max-width: 576px
+    max-width: 700px
     width: 92%
   .navbar
     &-bottom, &__search, &__user
@@ -230,45 +247,28 @@
         margin-left: 0
   .hotel
     &-right
-      flex-direction: column
-      min-height: 450px
+      min-height: 210px
     &-slider
       height: 350px
   .booking
-    width: 100%
+    width: 340px
+    margin-right: 20px
   .map
-    width: 100%
+    width: 340px
   .newsletter
     &-wrapper
-      flex-direction: column
-      align-items: flex-start
-    &__title
-      margin-bottom: 37px
+      align-items: center
+      justify-content: space-between
   .reviews
     &__title
       font-size: 30px
       line-height: 38px
-    &-slider
-      &__item
-        padding: 0 30px 30px
-        &::after, &::before
-          display: none
-      &__button
-        top: 30px
-        &--prev
-          left: 50%
-          transform: translate(-50%, 0)
-          margin-left: -75px
-        &--next
-          right: 50%
-          transform: translate(50%, 0)
-          margin-right: -75px
   .card
     width: 48%
     height: 255px
   .grid
     &-container
-      grid-template-columns: minmax(500px, 576px)
+      grid-template-columns: minmax(500px, 700px)
   .packages
     &-container
       padding-top: 20px
@@ -277,7 +277,7 @@
       line-height: 38px
       padding-bottom: 50px
   .item
-    max-width: 576px
+    max-width: 700px
     &__img
       &-one
         width: 100%
@@ -292,9 +292,13 @@
       background-color: $dark
       opacity: 0.85
       padding: 10px
+      height: 461px
       border-radius: 8px
       top: 15px
       right: 15px
+  .footer
+    &__inputs
+      width: 539px
   .mobile
     &-menu
       position: fixed
@@ -309,7 +313,12 @@
       align-items: center
       background-color: $dark
       transition: all 0.3s ease 0s
+      // &__container
+      //   width: 100%
+      //   height: 100%
+      //   overflow: scroll
       &__search
+        width: 240px
         margin-top: 27px
         overflow: hidden
         border-radius: 6px
@@ -332,7 +341,7 @@
             &__item
               margin-bottom: 20px
               &:last-child
-                margin-bottom: 0
+                padding-bottom: 110px
   .active
     &-menu
       top: 78px
@@ -357,7 +366,22 @@
     &__button
       align-self: center
       width: 100%
-
+@media ( max-width: 659px)
+  .newsletter
+    &__subscribe
+      width: 330px
+@media ( max-width: 635px)
+  .newsletter
+    &__subscribe
+      width: 310px
+@media ( max-width: 610px)
+  .newsletter
+    &__subscribe
+      width: 290px
+@media ( max-width: 588px)
+  .newsletter
+    &__subscribe
+      width: 280px
 @media ( max-width: 576px )
   .container, .newsletter-wrapper
     max-width: 500px
@@ -365,28 +389,66 @@
   .logo
     width: 99px
   .hotel
+    &-right
+      flex-direction: column
     &__slider
       margin-bottom: 20px
     &-slider
-      height: 250px
+      height: 179px
+      &__button
+        width: 12px
+        height: 12px
+        &--next
+          right: 6px
+        &--prev
+          left: 6px
+  .booking
+    width: 100%
+    margin-bottom: 20px
+  .map
+    width: 100%
+    height: 172px
   .newsletter
     padding: 76px 0 83px 0
+    &-wrapper
+      flex-direction: column
+      align-items: flex-start
     &-title
       font-weight: 300
       font-size: 20px
       line-height: 25px
+      margin-bottom: 37px
       &__strong
         font-weight: 600
         font-size: 30px
         line-height: 38px
+    &__subscribe
+      width: 280px
   .subscribe
-    width: 100%
     &__input
       padding-left: 20px
   .reviews
     &__title
+      max-width: 245px
+      margin: auto
+      margin-bottom: 42px
       font-size: 18px
       line-height: 23px
+    &-slider
+      &__item
+        padding: 0 30px 30px
+        &::after, &::before
+          display: none
+      &__button
+        top: 30px
+        &--prev
+          left: 50%
+          transform: translate(-50%, 0)
+          margin-left: -103px
+        &--next
+          right: 50%
+          transform: translate(50%, 0)
+          margin-right: -103px
   .activities
     &__title
       font-size: 18px
@@ -399,6 +461,9 @@
       grid-template-columns: minmax(285px, 500px)
       grid-template-rows: 520px 520px 520px 520px 500px
   .item
+    &__description
+      max-width: 220px
+      height: 282px
     &-description
       top: 208px
       &__text
@@ -462,12 +527,17 @@
         grid-column: 1
     &__inputs
       flex-direction: column
+      width: 100%
     &__input
+      width: 100%
       &-group
         width: 100%
+    &__message
+      width: 100%
     &__send
       flex-direction: column-reverse
       align-items: flex-start
+      width: 100%
     &__info
       margin-bottom: 15px
     &-bottom
@@ -482,10 +552,10 @@
       &__search
         .search
           &__input
-            width: 225px
+            width: 240px
   .modal
     &__dialog
-      min-width: 280px
+      max-width: 280px
       padding: 20px 25px  
 
 @media ( max-height: 542px)
@@ -494,17 +564,9 @@
       overflow: scroll
       height: 400px
   .mobile
-     &-menu
-       &__search
-         margin-top: 15px
-       &__user
-         margin-top: 20px
-       &__items
-         margin-top: 20px
-         .navbar
-            &-menu
-              &__item
-                margin-bottom: 13px
+    &-menu
+      overflow: scroll
+      min-height: 100%
 
 @media ( max-height: 480px)
   .modal
